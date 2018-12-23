@@ -1,0 +1,10 @@
+## Interface: 20400
+## Title: CDM_Self_Inspector
+## Author: liekki
+## Version: 0.1.0
+## Notes: Export your character profile by typing /cdm
+## Dependencies:
+## OptionalDeps:
+## SavedVariablesPerCharacter:
+## SavedVariables:
+CDM_Self_Inspector.xml
