@@ -42,12 +42,12 @@ InventoryRenames = {
 	["Tabard"] = "tabard",
 }
 
-function CDM_OnLoad()
-	SlashCmdList["CDM"] = CDM_Command;
-	SLASH_CDM1 = "/CDM";
+function OnLoad()
+	SlashCmdList["CDS"] = Command;
+	SLASH_CDM1 = "/CDS";
 end
 
-function CDM_Command(arg1)
+function Command(arg1)
 	local info = GetCharacterInfoData("player")
 	local gear = GetCharacterItemsData("player")
 	local talents = GetCharacterTalentsData("player")
@@ -57,8 +57,8 @@ function CDM_Command(arg1)
 	if not MyFrame then
 		local f = CreateFrame("Frame","MyFrame",UIParent)
 		f:SetFrameStrata("BACKGROUND")
-		f:SetWidth(510) 
-		f:SetHeight(350) 
+		f:SetWidth(510)
+		f:SetHeight(350)
 		f:SetMovable(true)
 		f:SetBackdrop({
 			bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background",
@@ -66,7 +66,7 @@ function CDM_Command(arg1)
 			edgeSize = 16,
 			insets = { left = 8, right = 6, top = 8, bottom = 8 },
 		})
-		f:SetBackdropBorderColor(0, .44, .87, 0.5) 
+		f:SetBackdropBorderColor(0, .44, .87, 0.5)
 
 		local button = CreateFrame("Button", "CloseButton", MyFrame, "GameMenuButtonTemplate")
 		button:SetPoint("BOTTOM")
@@ -86,8 +86,8 @@ function CDM_Command(arg1)
 		eb:SetHeight(300)
 		eb:SetWidth(460)
 		eb:SetMultiLine(true)
-		eb:SetAutoFocus(true) 
-		eb:SetFontObject("ChatFontNormal")	
+		eb:SetAutoFocus(true)
+		eb:SetFontObject("ChatFontNormal")
 		sf:SetScrollChild(eb)
 
 		f:SetResizable(true)
@@ -111,7 +111,7 @@ function GetCharacterInfoData(_Target)
 	if(guildtitle == nil) then guildtitle = ""; end
 	if(guildrank == nil) then guildrank = 0; end
 	if(UnitSex(_Target) == 2) then sex = 'male'; else sex = 'female'; end
-	
+
 	return '"name": "'..UnitName(_Target)..'", "level": '..UnitLevel(_Target)..', "sex": "'..sex..'", "race": "'..string.lower(race)..'", "class": "'..string.lower(class)..'", "guild": '..guildname..', "realm": "'..GetRealmName()..'"'
 end
 
@@ -136,7 +136,7 @@ end
 function GetCharacterTalentsData(_Target)
 	local characterName = UnitName(_Target);
 	local talentData = "[";
-	
+
 	function _GetTalentPageData(_PageIndex, _IsPlayer)
 		local talentData = "";
 		local numTalents = GetNumTalents(_PageIndex, _IsPlayer ~= true);
