@@ -44,7 +44,7 @@ InventoryRenames = {
 
 function OnLoad()
 	SlashCmdList["SELFINSPECT"] = Inspector_Command;
-	SLASH_CDM1 = "/SELFINSPECT";
+	SLASH_SELFINSPECT1 = "/SELFINSPECT";
 end
 
 function Inspector_Command(arg1)
