@@ -43,7 +43,7 @@ InventoryRenames = {
 }
 
 function OnLoad()
-	SlashCmdList["CDS"] = Command;
+	SlashCmdList["CDS"] = CDS_Command;
 	SLASH_CDM1 = "/CDS";
 end
 
