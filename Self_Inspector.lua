@@ -43,11 +43,11 @@ InventoryRenames = {
 }
 
 function OnLoad()
-	SlashCmdList["CDS"] = CDS_Command;
-	SLASH_CDM1 = "/CDS";
+	SlashCmdList["SELFINSPECT"] = Inspector_Command;
+	SLASH_CDM1 = "/SELFINSPECT";
 end
 
-function Command(arg1)
+function Inspector_Command(arg1)
 	local info = GetCharacterInfoData("player")
 	local gear = GetCharacterItemsData("player")
 	local talents = GetCharacterTalentsData("player")
