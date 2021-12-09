@@ -1,0 +1,11 @@
+## Interface: 11302
+## Title: DamageModelsExporter
+## Author: liekki
+## Version: 0.2.0
+## Notes: Export your character profile by typing /export
+## Dependencies:
+## OptionalDeps:
+## SavedVariablesPerCharacter:
+## SavedVariables:
+embeds.xml
+DamageModelsExporter.xml
